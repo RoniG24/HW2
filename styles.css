@@ -1,0 +1,221 @@
+/* ===== Variables: the site's colors ===== */
+:root {
+    --bg-color: #fdf8f5;
+    --text-color: #3a3346;
+    --accent-color: #c2547a;
+    --soft-color: #f6e1e8;
+    --card-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ===== General ===== */
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Chango", sans-serif;
+    font-size: 4rem;
+    font-weight: normal;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+h3 {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* the dotted line between sections (from the homework instructions) */
+hr {
+    border: dotted var(--accent-color) 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+}
+
+/* ===== Top container ===== */
+.top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--soft-color);
+    padding: 80px 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.title-text {
+    text-align: left;
+}
+
+.top-container h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 20px 0 0 0;
+}
+
+/* ===== Middle container ===== */
+.middle-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile {
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.profile p {
+    font-size: 1.1rem;
+}
+
+/* Flexbox: image on one side, skills on the other */
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0 60px 0;
+}
+
+.skill-row img {
+    width: 250px;
+    border-radius: 15px;
+}
+
+.skill-text {
+    max-width: 400px;
+}
+
+/* the skills list as "tags" */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.skills-list li {
+    display: block;
+    background-color: var(--soft-color);
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+/* Grid: three hobby cards in a row */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.hobby {
+    background-color: var(--card-color);
+    border: 2px solid var(--card-color);
+    border-radius: 15px;
+    padding: 16px;
+    transition: border 0.3s;
+}
+
+.hobby:hover {
+    border: 2px solid var(--accent-color);
+}
+
+.hobby img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hobby p {
+    font-size: 0.95rem;
+}
+
+/* ===== Bottom container ===== */
+.bottom-container {
+    background-color: var(--soft-color);
+    padding: 60px 20px;
+}
+
+.bottom-container h2 {
+    margin: 0 0 20px 0;
+}
+
+.email {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* the buttons */
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--text-color);
+}
+
+/* ===== Responsive: tablets and phones ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .top-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .title-text {
+        text-align: center;
+    }
+
+    .skill-row {
+        flex-direction: column;
+    }
+
+    .hobbies {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
